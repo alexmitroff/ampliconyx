@@ -1,0 +1,405 @@
+/* Rules for small devices (mobile vertical) */
+@font-face{
+    font-family:'Titillium Web';
+    src:url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* height and width will include border and padding */
+    }
+
+body{
+    display:flex; /* read more at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    flex-direction:column;
+    min-height:100vh; /* 100% viewport height */
+    font-family: 'Titillium Web', sans-serif;
+    color:#444;
+}
+
+header{
+    display:block;
+    min-height:3rem;
+    background: linear-gradient(to bottom, #302f2f 0%, #202020 100%);
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 1rem;
+}
+
+main > div.container{
+    display:block;
+    background-color:white;
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    background-color:#444;
+    color: #fff; /* font color */
+    min-height: 10rem;
+    padding-top:1rem;
+}
+
+footer > .container{
+    flex-grow: 1;
+}
+
+footer .copyright{
+    padding:.5rem 0;
+    color:#888;
+    text-align: center;
+    font-size: .7rem;
+    background-color: rgba(0,0,0,.4);
+}
+
+nav{
+    background-image:url(../imgs/lines.svg);
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:0 90%;
+}
+
+nav ul{
+    list-style:none;
+    display:none;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+header > nav{
+    display:flex;
+    justify-content:space-between;
+}
+
+nav .brand{
+    padding:1rem;
+    color:red;
+}
+
+nav > div:not(.brand){
+display:flex;
+justify-content:center;
+align-items:flex-end;
+padding:1rem;
+}
+
+nav > div:not(.brand) p{
+    color:#666;
+    text-transform:uppercase;
+    font-weight:bold;
+    display:none;
+    font-size:.8rem;
+}
+nav ul li {
+    padding:1rem;
+}
+
+section > a > .product p,
+a,
+nav ul li a{
+    transition: all .3s ease-in-out 0s;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#eee;
+}
+
+nav ul li a:hover{
+    color:#444;
+}
+
+.container{
+    width:100%;
+    margin:0 auto;
+}
+
+#mobile-menu-button{
+    display:block;
+    padding:1rem;
+    background:none;
+    border:none;
+    color:#888;
+    cursor:pointer;
+    align-self:flex-start;
+}
+
+#mobile-menu-button:hover{
+    color:#444;
+}
+
+ul.active{
+    display:flex;
+}
+
+.carousel{
+    width:100%;
+}
+
+.carousel-item{
+    width:100%;
+    height:30vh;
+    background-color:gray;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.carousel-item > div{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item > div > h2{
+    text-align: center;
+    margin-bottom:1rem;
+}
+
+
+
+h2.separator{
+    text-align:center;
+    padding-top:2rem;
+    padding-bottom:1rem;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    padding:0 0 0 0;
+    margin-bottom:1rem;
+}
+
+
+section > .section-image{
+    background-size: contain;
+    background-position: center;
+    background-image: url(../imgs/sections/01.png);
+    background-repeat: no-repeat;
+}
+
+section > .section-text{
+    padding:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section > .section-text > h3{
+    margin-bottom:1rem;
+}
+
+section > .section-text > p {
+    padding:1rem;
+    background-color:#eee;
+}
+
+section > .section-image,
+section > .section-text{
+    width:100%;
+    min-height:20rem;
+}
+
+section:nth-child(even) > .section-image,
+section:nth-child(odd) > .section-image{
+    order:0;
+}
+
+section:nth-child(even) > .section-text,
+section:nth-child(odd) > .section-text{
+    order:1;
+}
+
+section > a {
+    width:100%;
+    text-decoration:none;
+    color:#444;
+}
+
+section > a > .product{
+    margin-top:1rem;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+}
+
+section > a > .product:before{
+    content:"";
+    display:block;
+    padding-top:10vh;
+}
+
+section > a > .product > .product-content{
+}
+
+div.about{
+    background-color:#d58fff;
+    background-blend-mode: multiply;
+}
+
+div.tech{
+    background-color: #91ecff;
+    background-blend-mode: multiply;
+}
+
+section > a:hover > .product.about p{color:#704789;}
+a.about{ color:#d087fe;}
+
+section > a:hover > .product.tech p{color:#3499ae;}
+a.tech{ color:#86e8fc;}
+
+section > a:hover > .product.prod p,
+a.prod
+{
+    color:#2FAB2F;
+}
+
+section > a > .product p{
+    background-color:rgba(255,255,255,.7);
+    text-align:center;
+    border-top:.25rem solid white;
+    padding:0 0 .2rem 0;
+    height:25%;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+section > a:hover .product p{
+    background-color:white;
+}
+
+
+.address{
+    list-style: none;
+}
+
+.brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.brand > svg{
+    height:2rem;
+}
+
+.brand > svg * {
+    fill:#d51118;   
+}
+
+.news{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    padding: 0 1rem;
+}
+
+.news .news-item{
+    padding-bottom:1rem;
+}
+
+.news .news-item h2 {
+    text-transform:uppercase;
+    padding-bottom:1rem;
+    border-bottom:.1rem solid #ccc;
+    margin-bottom:1rem;
+}
+
+div.btn{
+    padding:1rem 0;
+}
+
+.carousel-item > div > a.button,
+div.btn > a{
+    width:-moz-fit-content;
+    width:-webkit-fit-content;
+    width:-ms-fit-content;
+    width:-o-fit-content;
+    display:block;
+    text-transform:uppercase;
+    padding:.5rem 1rem;
+    border:.1rem solid #444;
+    color:#444;
+    font-size:1rem;
+    text-decoration:none;
+    border-radius:2rem;
+    margin:0 auto;
+}
+
+.carousel-item > div > h2,
+.carousel-item > div > a.button{
+    color:white;
+}
+
+.carousel-item > div > a.button{
+     border-color: white;
+}
+
+.carousel-item > div > a.button:hover{
+    color:#00B5AD;
+    border-color: #00B5AD;
+}
+
+.carousel-item > div > a.button-green:hover{
+    color:green;
+    border-color:green;
+}
+
+
+/* Rules for mobile horisontal and tablet vertical */
+@media (min-width:560px) and (max-width:767px) {
+    section > a {width:50%;}
+   .products{flex-direction:row;flex-wrap:wrap;} 
+}
+
+/* Rules commot to screens bigger than tablet screens */
+@media (min-width:768px) {
+    nav > ul{display:flex; flex-direction:row;}
+    #mobile-menu-button{display:none;}
+    section{flex-direction: row;}
+    section > .section-image,
+    section > .section-text{width:50%;}
+    section:nth-child(even) > .section-image,
+    section:nth-child(odd) > .section-text{order:0;}
+    section:nth-child(odd) > .section-image,
+    section:nth-child(even) > .section-text{order:1;}
+    section > a {width:25%;}
+   .products{flex-direction:row;flex-wrap:wrap;}
+    header{position:fixed; width:100%;}
+   main{margin-top:6rem;}
+  header > nav{padding-top:2rem;}
+  .news-item{width:40%;}
+    .news{flex-direction:row;}
+    div.btn > a{margin:0 0 0 1rem;}
+    nav > div:not(.brand) p{display:block;}
+}
+
+/* Rules for tablet horisontal and small ultrabook screens */
+@media (min-width:768px) and (max-width:919px) {
+    section > a {width:50%;}
+    div.btn > a{margin:0 0 0 1rem;}
+}
+
+/* Rules for middle screens */
+@media (min-width:920px) and (max-width:1199px) {
+    .container{width:75%;}
+    .news{padding:0;}
+    div.btn > a{margin:0;}
+}
+
+/* Rules for large screens */
+@media (min-width:1200px) {
+    .container{width:65%;}
+    .news{padding:0;}
+    div.btn > a{margin: 0;}
+}

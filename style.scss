@@ -1,0 +1,249 @@
+$font-name: 'Titillium Web';
+$font-color: #444;
+$font-white: #fff;
+$font-light: #888;
+$logo-color: #d51118;
+
+/* menu */
+$about-color: #d58fff;
+$about-text: #704789;
+
+$products-color: #fff;
+$products-text: #2FAB2F;
+
+$technology-color: #91ecff;
+$technology-text: #3499ae;
+
+$contacts-color: #fff;
+$contacts-text: #444;
+
+/* Rules for small devices (mobile vertical) */
+@font-face{
+    font-family:$font-name;
+    src:url(fonts/TitilliumWeb-Regular.ttf);
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* height and width will include border and padding */
+    }
+
+a, a *{
+    transition: all .3s ease-in-out 0s;
+}
+
+body{
+    display:flex; /* read more at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    flex-direction:column;
+    min-height:100vh; /* 100% viewport height */
+    font-family: $font-name, sans-serif;
+    color:$font-color;
+
+    > header{
+        display:block;
+        min-height:3rem;
+        background: linear-gradient(to bottom, #302f2f 0%, #202020 100%);
+        margin-bottom:1rem;
+    
+        > .container {
+            background-image:url(imgs/lines.svg);
+            background-repeat:no-repeat;
+            background-size:60%;
+            background-position:0 90%;
+            display:flex;
+            justify-content:space-between;
+            
+            > .brand{
+                padding:1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                > svg{
+                    height:2rem;
+
+                    *{
+                        fill: $logo-color;
+                    }
+                }
+            }
+
+            > div:not(.brand){
+                display:flex;
+                justify-content:center;
+                align-items:flex-end;
+                padding:1rem;
+                p{
+                    color:#666;
+                    text-transform:uppercase;
+                    font-weight:bold;
+                    display:none;
+                    font-size:.8rem;
+                }
+            }
+        }
+
+    }
+    
+    > main {
+        flex: 1 0 auto;
+        padding-bottom: 1rem;
+        
+        > .container{
+            display:block;
+            background-color:white;
+        }
+    }
+    
+    > footer{
+        display:flex;
+        flex-direction: column;
+        background-color:#444;
+        color: $font-white; /* font color */
+        min-height: 10rem;
+        padding-top:1rem;
+        
+        > .container{
+            flex-grow: 1;
+        }    
+        
+        .copyright{
+            padding:.5rem 0;
+            color:$font-light;
+            text-align: center;
+            font-size: .7rem;
+            background-color: rgba(0,0,0,.4);
+        }
+    }
+}
+
+.container{
+    width:100%;
+    margin:0 auto;
+    display:block;
+}
+
+.menu-main-menu-container > ul{
+    display:flex;
+    flex-wrap:wrap;
+    list-style:none;
+
+    > li{
+        width:100%;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        
+        > a:before{
+            content: "";
+            display: block;
+            padding-top: 10vh;
+        }
+        > a {
+            display:block;
+            width:100%;
+            text-decoration: none;
+            color: $font-color;
+
+            > span{
+                display:block;
+                background-color: rgba(255,255,255,.7);
+                text-align: center;
+                border-top: .25rem solid white;
+                padding: 0 0 .2rem 0;
+                height: 25%;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+        > a:hover {
+            > span{
+                background-color: rgba(255,255,255,1);
+            }
+        }
+    }
+
+    > .menu-about {
+        background-image: url(imgs/sections/01.jpg);
+        background-color: $about-color;
+        
+        > a:hover{
+            color: $about-text;
+        }
+    }
+    
+    > .menu-products {
+        background-image: url(imgs/sections/02.jpg);
+        background-color: $products-color;
+        
+        > a:hover{
+            color: $products-text;
+        }
+    }
+    
+    > .menu-technology {
+        background-image: url(imgs/sections/03.jpg);
+        background-color: $technology-color;
+        
+        > a:hover{
+            color: $technology-text;
+        }
+    }
+    
+    > .menu-contacts {
+        background-image: url(imgs/sections/04.jpg);
+        background-color: $contacts-color;
+        
+        > a:hover{
+            color: $contacts-text;
+        }
+    }
+}
+
+.address{
+    list-style:none;
+}
+
+/* Rules for mobile horisontal and tablet vertical */
+@media (min-width:560px) and (max-width:767px) {
+    .menu-main-menu-container > ul{
+        > li{ width:50%}
+    }
+}
+
+/* Rules commot to screens bigger than tablet screens */
+@media (min-width:768px) {
+    body{
+        > header{
+            > .container{
+                padding-top:2rem;
+                
+                > div:not(.brand){
+                    p{
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+    .menu-main-menu-container > ul{
+        > li{ width:25%}
+    }
+}
+
+/* Rules for tablet horisontal and small ultrabook screens */
+@media (min-width:768px) and (max-width:919px) {
+}
+
+/* Rules for middle screens */
+@media (min-width:920px) and (max-width:1199px) {
+    .container{width:920px;}
+}
+
+/* Rules for large screens */
+@media (min-width:1200px) {
+    .container{width:920px;}
+}
