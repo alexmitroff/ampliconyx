@@ -3,6 +3,8 @@ $font-color: #444;
 $font-white: #fff;
 $font-light: #888;
 $logo-color: #d51118;
+$link: #666;
+$link-active: $font-color;
 
 /* menu */
 $about-color: #d58fff;
@@ -34,6 +36,18 @@ a, a *{
     transition: all .3s ease-in-out 0s;
 }
 
+a{
+    color:$link;
+    text-decoration:none;
+}
+
+a:hover,
+a:active{
+    color:$link-active;
+    text-decoration:underline;
+}
+
+
 body{
     display:flex; /* read more at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
     flex-direction:column;
@@ -61,7 +75,7 @@ body{
                 justify-content: center;
                 align-items: center;
 
-                > svg{
+                > a > svg{
                     height:2rem;
 
                     *{
@@ -250,6 +264,52 @@ div.table{
     }    
       
 }
+
+.front-carousel{
+    .front-carousel-item{
+        width: 100%;
+        height: 30vh;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+}
+
+.posts{
+    display:flex;
+    flex-direction:column;
+    .fixed-post{
+        > p {
+            padding:1rem 0 0 0;
+        }
+    }
+
+    .latest-news{
+        > ul{
+            list-style-type:none;
+            padding:1rem 0 0 0;
+            > li {
+                padding:1rem 0 0 0;
+            }
+        }
+    }
+}
+
+$pic-size: 10rem;
+.product-images{
+    display:flex;
+    justify-content:space-between;
+    > div{
+        display:block;
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+        width:$pic-size;
+        height:$pic-size;
+    }
+}
+
 /* Rules for mobile horisontal and tablet vertical */
 @media (min-width:560px) and (max-width:767px) {
     .menu-main-menu-container > ul{
@@ -282,6 +342,22 @@ div.table{
             > div {
                 width:50%;
             }
+        }
+    }
+
+    article{
+        padding:1rem 0;
+    }
+
+    .posts{
+        flex-direction:row;
+        justify-content:space-between;
+        .fixed-post{
+            width:50%;
+        }
+
+        .latest-news{
+            width:30%;
         }
     }
 }

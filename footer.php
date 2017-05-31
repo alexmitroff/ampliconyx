@@ -11,15 +11,15 @@
         Copyright © Ampliconyx Oy 
     </div>
 </footer>
-        <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="static/slick/slick.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){                    // When HTML document ready execute scripts
                 $("#mobile-menu-button").click(function(){   // add function to button click event which will
                     $("#global-menu").toggleClass("active"); // toggle 'active' class for global menu 
                 });
                 
-                $(".carousel").slick({
+                $(".front-carousel").slick({
                     autoplay: true,
                     arrows:false,
                     dots:false,

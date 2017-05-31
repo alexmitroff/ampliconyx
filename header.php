@@ -10,15 +10,15 @@
             <?php the_title() ?> | Ampliconyx
         <?php endif?>         
      </title>
-     <link rel="stylesheet" type="text/css" href="static/slick/slick.css">
-     <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css">
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body>
         <header>
             <div class="container">
                 <div class="brand">
-<svg x="0px" y="0px" viewBox="0 0 640 100">
+<a href="/"><svg x="0px" y="0px" viewBox="0 0 640 100">
     <g>
 	    <polygon points="40,35.8 40.6,35.7 45,52 62.3,51.6 48.1,16.3 31.3,16.6 18.8,52.5 36,52.2 	"/>
 	    <polygon points="96.8,50.1 97.3,50 97.7,50.9 128.9,50.3 129.3,49.4 129.9,49.5 129.8,50.3 147.2,50 146.5,14.3 128.1,14.7 113.3,48.4 97.3,15.3 78.9,15.7 79.6,51.3 96.9,51 	"/>
@@ -46,7 +46,7 @@
     	<polygon points="523.2,95.3 541.6,95.5 541.8,68.6 545.4,62.8 519.9,62.6 523.4,68.4 	"/>
 	    <polygon points="565.8,95.7 587.3,95.8 599.9,72.6 612.5,96 633.9,96.2 614.6,63.4 585.7,63.1 	"/>
     </g>
-</svg>
+</svg></a>
                 </div>
                 <div><p>New Frontier in Ultrafast Fiber Laser Performance</p>
             </div>
