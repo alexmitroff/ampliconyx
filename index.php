@@ -7,11 +7,11 @@
             'link_after' => '</span>',
             )); ?>  
     </div>
-    <div class="container">
+    <article class="container">
     <?php
         while ( have_posts() ) : the_post();
             the_content();
         endwhile;?>
-    </div>
+    </article>
 </main>
 <?php get_footer(); ?>

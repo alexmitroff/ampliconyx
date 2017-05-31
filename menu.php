@@ -1,5 +1,5 @@
 
-                <section class="products">
+                <nav class="products">
                     <a href="#!">
                         <div class="product about" style="background-image:url(static/imgs/sections/01.jpg);">
                             <div class="product-content">
@@ -28,4 +28,4 @@
                             </div>
                         </div>
                     </a>
-                </section>
+                </nav>

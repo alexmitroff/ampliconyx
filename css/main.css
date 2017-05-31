@@ -315,6 +315,14 @@ section > a:hover .product p{
     margin-bottom:1rem;
 }
 
+article{
+    padding:1rem;
+}
+
+article p {
+    margin-bottom:1rem;
+}
+
 div.btn{
     padding:1rem 0;
 }
