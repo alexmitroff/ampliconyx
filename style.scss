@@ -269,10 +269,20 @@ div.table{
     .front-carousel-item{
         width: 100%;
         height: 30vh;
+        background-repeat:no-repeat;
         background-color: gray;
         background-position: center;
         background-size: cover;
         overflow: hidden;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        > h2 {
+           // min-height:10vh;
+        }
+        > h2.light {
+            color:white;
+        }
     }
 }
 
