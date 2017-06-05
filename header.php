@@ -10,6 +10,7 @@
             <?php the_title() ?> | Ampliconyx
         <?php endif?>         
      </title>
+     <script src="https://use.fontawesome.com/738ad9e54c.js"></script>
      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">

@@ -32,7 +32,7 @@ $contacts-text: #444;
     box-sizing:border-box; /* height and width will include border and padding */
     }
 
-a, a *{
+a, a *, input, textarea{
     transition: all .3s ease-in-out 0s;
 }
 
@@ -277,11 +277,15 @@ div.table{
         display:flex;
         justify-content:center;
         align-items:center;
+        padding:1rem;
         > h2 {
            // min-height:10vh;
         }
+        > h2.dark{
+            color:#111;
+        }
         > h2.light {
-            color:white;
+            color:#eee;
         }
     }
 }
@@ -317,6 +321,72 @@ $pic-size: 10rem;
         background-position:center;
         width:$pic-size;
         height:$pic-size;
+    }
+}
+
+ul.docs{
+    list-style-type:none;
+    display:flex;
+    padding:0;
+    > li{
+        padding:0 .5rem;
+    }
+
+    > li:first-child{
+        padding-left:0;
+    }
+
+    > li:last-child{
+        padding-right:0;
+    }
+
+    a[href$=".pdf"]:before{
+        font-family: FontAwesome;
+        content: "\f1c1";
+    }
+
+    a[href$=".pdf"]:before,
+    a[href$=".pdf"]:hover,
+    a[href$=".pdf"]:focus{
+        color: #BB0706;
+        text-decoration:none;
+    }
+}
+
+
+.contacts {
+    display:flex;
+    flex-direction:column;
+    .feedback form{
+        label > span {
+            color:red;
+        }
+
+        input,
+        textarea{
+            background:none;
+            border:.1rem solid #888;
+            padding:.5rem;
+            width:100%;
+        }
+
+        input:hover,
+        input:focus,
+        textarea:hover,
+        textarea:focus{
+            border-color:$contacts-text;
+        }
+
+        input[type=submit]{
+            width:auto;
+            cursor:pointer;
+        }
+
+        input[type=submit]:focus,
+        input[type=submit]:hover{
+            background-color:$contacts-text;
+            color:$contacts-color;
+        }
     }
 }
 
@@ -369,6 +439,21 @@ $pic-size: 10rem;
         .latest-news{
             width:30%;
         }
+    }
+
+    .front-carousel{
+        .front-carousel-item{
+            > h2 {width:60%;}
+        }
+    }
+
+    .contacts{
+        flex-direction:row;
+        > div {
+            width:50%;
+        }
+        > .feedback{padding-right:.5rem;}
+        > .address{padding-left:.5rem;}
     }
 }
 
