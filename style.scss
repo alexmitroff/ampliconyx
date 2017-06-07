@@ -10,7 +10,7 @@ $link-active: $font-color;
 $about-color: #d58fff;
 $about-text: #704789;
 
-$products-color: #ffffff;
+$products-color: #70C370;
 $products-text: #2FAB2F;
 
 $technology-color: #91ecff;
@@ -149,7 +149,7 @@ body{
         background-size: cover;
         background-position: center;
         background-blend-mode: multiply;
-        
+       margin-bottom:.5rem; 
         > a:before{
             content: "";
             display: block;
@@ -219,13 +219,19 @@ body{
 
 .address{
     list-style:none;
+    padding-left:1rem;
+    > iframe{
+        height:100%;
+        width:100%;
+    }
 }
 
 article {
-    padding:1rem;
+    padding:1rem 0;
     section {
         margin-bottom:1rem;
     }
+
     p {
         margin-bottom:1rem;
     }
@@ -233,6 +239,11 @@ article {
     ul {
         padding-left:1rem;
     }
+}
+
+.mobile-padding{
+    padding-left:1rem;
+    padding-right:1rem;
 }
 
 
@@ -292,6 +303,7 @@ div.table{
 }
 
 .posts{
+    padding:0 1rem;
     display:flex;
     flex-direction:column;
     .fixed-post{
@@ -322,6 +334,15 @@ $pic-size: 10rem;
         background-position:center;
         width:$pic-size;
         height:$pic-size;
+        margin:.5rem;
+    }
+
+    > div:first-child{
+        margin-left:0;
+    }
+
+    > div:last-child{
+        margin-right:0;
     }
 }
 
@@ -426,10 +447,6 @@ ul.docs{
         }
     }
 
-    article{
-        padding:1rem 0;
-    }
-
     .posts{
         flex-direction:row;
         justify-content:space-between;
@@ -456,6 +473,8 @@ ul.docs{
         > .feedback{padding-right:.5rem;}
         > .address{padding-left:.5rem;}
     }
+
+
 }
 
 /* Rules for tablet horisontal and small ultrabook screens */
@@ -465,9 +484,19 @@ ul.docs{
 /* Rules for middle screens */
 @media (min-width:920px) and (max-width:1199px) {
     .container{width:920px;}
+    .address{padding:0;}
+    .mobile-padding{
+        padding-left:0rem;
+        padding-right:0rem;
+    }
 }
 
 /* Rules for large screens */
 @media (min-width:1200px) {
     .container{width:920px;}
+    .address{padding:0;}
+    .mobile-padding{
+        padding-left:0rem;
+        padding-right:0rem;
+    }
 }
